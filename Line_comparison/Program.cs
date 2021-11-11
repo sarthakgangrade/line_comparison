@@ -14,17 +14,7 @@ namespace Line_comparison
             return lengthOfLine;
         }
 
-        public void checkEquality(double lengthofLine1, double lengthOfLine2)
-        {
-            if (lengthofLine1 == lengthOfLine2)
-            {
-                Console.WriteLine("Both lines are equal");
-            }
-            else
-            {
-                Console.WriteLine("Both lines are not equal");
-            }
-        }
+        
         static void Main(string[] args)
         {
             int x1, x2, m1, m2, y1, y2, n1, n2;
@@ -47,9 +37,22 @@ namespace Line_comparison
             double lengthOfLine2 = c.LengthOfLine(m1, m2, n1, n2);
             Console.WriteLine("Length of 1st line end points::{0}", lengthOfLine1);
             Console.WriteLine("Length of 2nd line end points::{0}", lengthOfLine2);
-            c.checkEquality(lengthOfLine1, lengthOfLine2);
-            Console.ReadLine();
-
+            
+            if (lengthOfLine1 == lengthOfLine2) //comparing both lenght
+            {
+                Console.WriteLine("both are equal ");
+                Console.ReadLine();
+            }
+            else if (lengthOfLine1 > lengthOfLine2) //comparing greter than both of varibales
+            {
+                Console.WriteLine("lines one is greater then two");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("line 2 is reater than 1");
+                Console.ReadLine();
+            }
         }
     }
 }
